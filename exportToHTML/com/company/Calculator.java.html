@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Calculator.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Calculator.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.company</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.util.function.*</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Calculator {</span>
+
+    <span class="s0">static </span><span class="s1">Supplier&lt;Calculator&gt; instance = Calculator::</span><span class="s0">new;</span>
+    <span class="s1">BinaryOperator&lt;Integer&gt; plus = (x</span><span class="s0">, </span><span class="s1">y) -&gt; x + y</span><span class="s0">;</span>
+    <span class="s1">BinaryOperator&lt;Integer&gt; minus = (x</span><span class="s0">, </span><span class="s1">y) -&gt; x - y</span><span class="s0">;</span>
+    <span class="s1">BinaryOperator&lt;Integer&gt; multiply = (x</span><span class="s0">, </span><span class="s1">y) -&gt; x * y</span><span class="s0">;</span>
+    <span class="s1">BinaryOperator&lt;Integer&gt; devide = (x</span><span class="s0">, </span><span class="s1">y) -&gt; x / y</span><span class="s0">;</span>
+    <span class="s1">UnaryOperator&lt;Integer&gt; pow = x -&gt; x * x</span><span class="s0">;</span>
+    <span class="s1">UnaryOperator&lt;Integer&gt; abs = x -&gt; x &gt; </span><span class="s2">0 </span><span class="s1">? x : x * -</span><span class="s2">1</span><span class="s0">;</span>
+    <span class="s1">Predicate&lt;Integer&gt; isPositive = x -&gt; x &gt; </span><span class="s2">0</span><span class="s0">;</span>
+    <span class="s1">Consumer&lt;Integer&gt; println = System.out::println</span><span class="s0">;</span>
+<span class="s1">}</span>
+</pre>
+</body>
+</html>
